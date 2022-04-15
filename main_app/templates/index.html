@@ -1,0 +1,8 @@
+<h2>Status: <span id="status"></span></h2>
+<button onclick="getStatus()">check status</button>
+<script>
+    function getStatus() {
+        fetch(window.location.origin + '/status').then(r => r.json()).then(res => console.log(res))
+    }
+
+</script>
